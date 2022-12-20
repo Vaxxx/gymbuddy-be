@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /gymbuddy
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/java_gymbuddy
+    username: vax
+    password: vakporize
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format-sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+
+
+ng:
+  com:
+    createsoftware:
+      secret: GYMBUDDYSECRETKEY
+      expiration: 86400000000
