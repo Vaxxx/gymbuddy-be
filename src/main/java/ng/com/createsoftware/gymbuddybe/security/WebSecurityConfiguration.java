@@ -65,7 +65,11 @@ public class WebSecurityConfiguration {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeHttpRequests().requestMatchers("/api/v1/auth/**").permitAll()
                 .requestMatchers("/api/v1/user/**").permitAll()
-                .requestMatchers("/api/page/**").permitAll()
+                .requestMatchers("/api/v1/admin/**").permitAll()
+                .requestMatchers("/api/v1/gallery/**").permitAll()
+                .requestMatchers("/api/v1/location/**").permitAll()
+                .requestMatchers("/api/v1/post/**").permitAll()
+                .requestMatchers("/api/v1/page/**").permitAll()
 
                 .anyRequest().authenticated()
                 .and().formLogin();

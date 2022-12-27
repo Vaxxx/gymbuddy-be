@@ -24,8 +24,10 @@ spring:
 
   servlet:
     multipart:
+      enabled: true
       max-file-size: 2MB
       max-request-size: 2MB
+      file-size-threshold: 2MB
 
 
 ng:
@@ -33,3 +35,6 @@ ng:
     createsoftware:
       secret: GYMBUDDYSECRETKEY
       expiration: 86400000000
+
+file:
+  upload-dir: ./fileUploadz/
